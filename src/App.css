@@ -14,11 +14,11 @@
 .nav_logo {
     font-weight: bold;
     font-size: 30px;
-    margin: 15px;
+    margin-left: 3vh;
     color: rgb(255, 255, 255);
 }
 
-.nav_items{
+.nav_items {
     display: flex;
     align-items: flex-end;
 }
@@ -35,19 +35,20 @@
     color: rgb(235, 133, 0);
 }
 
-.cartWidget{
+.cartWidget {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     cursor: pointer;
 }
+
 img {
-    display: flex;   
+    display: flex;
     width: 6vh;
     justify-content: center;
 }
 
-.cartNumber{
+.cartNumber {
     font-weight: bold;
     color: rgb(255, 255, 255);
-margin-left: 0.5vh;
+    
 }
