@@ -1,0 +1,19 @@
+
+
+.cartWidget {
+    display: flex;
+    justify-content: space-evenly;
+    cursor: pointer;
+}
+
+img {
+    display: flex;
+    width: 6vh;
+    justify-content: center;
+}
+
+.cartNumber {
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    
+}

@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital@1&display=swap');
+
+.container-b {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    
+}
+
+.img-card {
+    margin-left: 4vh;
+    width: 17vh;
+    height: 17vh;
+    border-radius: 4vh;
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    border-radius: 1vh;
+    box-shadow: -58px -82px 41px -46px rgba(12, 117, 95, 0.61) inset;
+    -webkit-box-shadow: -58px -82px 41px -46px rgba(12, 117, 95, 0.61) inset;
+    -moz-box-shadow: -58px -82px 41px -46px rgba(12, 117, 95, 0.61) inset;
+    width: 25vh;
+    height: 42vh;
+    margin: 4vh;
+    margin-top: 10vh;
+}
+
+.card-b {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Merriweather", sans-serif;
+    max-height: 22vh;
+}
+ .card-btn{
+    width: 10vh;
+    margin-bottom: 1vh;
+    margin-left: 7vh;
+    border-radius: 5px;
+    border: none;
+    color: black;
+ }
+
+ .seartch{
+    display: flex;
+    flex-direction: column;
+ }
+ .seartch input{
+    height: 2vh;
+    border-radius: 1vh;
+ }
+ .search h2{
+    display: flex;
+ }

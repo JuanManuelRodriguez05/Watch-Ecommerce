@@ -1,0 +1,26 @@
+
+.cart-count{
+    padding-left: 1vh;
+    padding-bottom: 1vh;
+    width: 18vh;
+    height: 8vh;
+    border: 1px solid black;
+    border-radius: 1vh;
+}
+
+label{
+    border: 1px solid black;
+    border-radius: 50%;
+}
+
+.btn{
+    width: 40px;
+    margin: 10px;
+    border-radius: 1vh;
+}
+
+.btn-cart{
+    margin-left: 1vh;
+    height: 30px;
+    border-radius: 1vh;
+}

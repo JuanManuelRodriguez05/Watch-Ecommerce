@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital@1&display=swap');
+
+.navBar {
+    background-image: url(../public/img/backgroundHeader.jpg);
+    background-size: cover;
+    height: 30vh;
+    font-family: "Merriweather", sans-serif;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand {
+    font-weight: bold;
+    font-size: 25px;
+    text-decoration: none;
+    margin-left: 3vh;
+    color: rgb(255, 255, 255);
+}
+
+.cartNumber{
+    text-decoration: none;
+    font-size: 2.5vh;
+}
+
+.nav_items {
+    display: flex;
+    align-items: flex-end;
+}
+
+.nav_items a {
+    margin: 15px;
+    color: rgb(12, 117, 95);
+    font-weight: bold;
+    font-size: 25px;
+    text-decoration: none;
+}
+.nav_items_active{
+    color:rgb(235, 133, 0) ;
+}
+
+.nav_items a:hover {
+    color: rgb(235, 133, 0);
+}
+
+.dropdown{
+    display: none;
+    position: absolute;
+    list-style: none;
+}
+
+.dropdown li:hover{
+    display: block;
+}
+.dropdown li a {
+    display: block;
+}
