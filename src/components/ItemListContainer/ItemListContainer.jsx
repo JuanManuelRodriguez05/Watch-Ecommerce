@@ -38,13 +38,14 @@ const ItemListContainer = (props) => {
         <h2>Buscar</h2>
         <input type="text" value={stateF} onChange={filterChange} />
       </section>
+
       {isLoading ?
         <h2>Cargando...</h2>
         :
         <>
           {stateF === ""
-
-            ? relojes.map(({ id, categoria, imagen, marca, precio }) => <div key={id} className="card">
+            
+             ? relojes.map(({ id, categoria, imagen, marca, precio }) => <div key={id} className="card">
               <img src={imagen} className="img-card" alt="imagen-reloj" />
               <div className="card-b">
                 <h4>{marca}</h4>
@@ -57,7 +58,7 @@ const ItemListContainer = (props) => {
             </div>
             )
             :
-            relojes.filter()(reloj => reloj.marca.toLowerCase().includes(stateF.toLowerCase())).map(({ id, categoria, imagen, marca, precio }) => <div key={id} className="card">
+            relojes.filter(reloj => reloj.marca.toLowerCase().includes(stateF.toLowerCase())).map(({ id, categoria, imagen, marca, precio }) => <div key={id} className="card">
               <img src={imagen} className="img-card" alt="imagen-reloj" />
               <div className="card-b">
                 <h4>{marca}</h4>
@@ -68,11 +69,10 @@ const ItemListContainer = (props) => {
                 <button className="card-btn">Ver</button>
               </Link>
             </div>
-            )
-          }
-
-        </>
-      }
+            
+            )}
+        </>}
+        
     </div>
   )
 
@@ -81,8 +81,6 @@ const ItemListContainer = (props) => {
     <Filter >
       {pFiltered}
     </Filter>
-
-
   )
 }
 

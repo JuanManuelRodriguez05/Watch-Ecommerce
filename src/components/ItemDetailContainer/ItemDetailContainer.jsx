@@ -14,9 +14,9 @@ const DetailContainer = () => {
             .then(resp => setItem(resp))
             .catch(err => console.log(err))
             .finally(() => setLoading(false))
-    })
+    }, [])
 
-    return (
+     return (
         <div>
             {loading ?
                 <h2>cargando...</h2>

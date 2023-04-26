@@ -31,13 +31,12 @@ let relojes = [
 ]
 
 
-export const mFetch = () => { 
+export const mFetch = (id) => { 
     return new Promise((res, rej) => {
 
         setTimeout(() => {
-            res(relojes)
+            res(!id ? relojes : relojes.find (reloj => reloj.id ===id))
         }, 1500)
-    }
-    )
+    })
 }
 

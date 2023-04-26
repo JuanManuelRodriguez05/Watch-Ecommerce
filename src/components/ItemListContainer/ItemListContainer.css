@@ -47,13 +47,21 @@
  }
 
  .seartch{
+    position: absolute;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    height: 5vh;
+    width: 10vh;
+    color: rgb(12, 117, 95);
+
  }
  .seartch input{
     height: 2vh;
+    width: 15vh;
     border-radius: 1vh;
+    border: 2px solid rgb(12, 117, 95);
+    margin: 1vh;
  }
- .search h2{
-    display: flex;
- }
+ 
