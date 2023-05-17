@@ -1,11 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital@1&display=swap');
 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 .navBar {
     background-image: url(../public/img/backgroundHeader.jpg);
     background-size: cover;
+    border-radius: 0 0 3vh 3vh ;
     height: 30vh;
     font-family: "Merriweather", sans-serif;
-    border-radius: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -45,15 +51,3 @@
     color: rgb(235, 133, 0);
 }
 
-.dropdown{
-    display: none;
-    position: absolute;
-    list-style: none;
-}
-
-.dropdown li:hover{
-    display: block;
-}
-.dropdown li a {
-    display: block;
-}

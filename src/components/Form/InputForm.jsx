@@ -4,7 +4,7 @@ import { formValidation } from "./formValidation.jsx"
 
 const FormValidation = formValidation(Form)
 
-const Form = () => {
+export const InputForm = () => {
 
     const [formData, setFormData] = useState({
         name: "",

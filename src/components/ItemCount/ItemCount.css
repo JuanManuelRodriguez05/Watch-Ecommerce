@@ -1,53 +1,68 @@
 .cart-count {
     display: flex;
     justify-content: center;
-    padding-bottom: 1vh;
+    padding-top: 0.5vh;
     width: 40vh;
     height: 8vh;
     border-radius: 1vh;
+    background-color: rgb(107, 175, 160);
+    border: 2px solid rgb(235, 133, 0);
 }
 
 label {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid black;
+    border: 2px solid rgb(235, 133, 0);
     width: 3vh;
     height: 3vh;
-    margin-top: 2vh;
-    border-radius: 50%;
-    background-color: rgba(161, 92, 2, 0.493);
-    border: 2px solid rgb(235, 133, 0);
+    margin: 1.5vh 2vh 3vh 2vh ;
+    padding: 0.75vh 0 1vh 0 ;
+    border-radius: 35%;
+    background-color: white;
+    
 }
 
 .btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.5vh;
-    width: 4vh;
-    height: 4vh;
-    margin: 1.5vh 1vh 0 1vh;
-    border-radius: 1vh;
-    background-color: rgba(12, 117, 94, 0.5);
-    border: 2px solid rgb(12, 117, 95);
+   width: 5vh;
+   height: 4vh;
+   margin-top: 1vh;
+   text-decoration: none;
+   color: black;
+   font-size: 16px;
+   border-radius: 1vh;
+   border: 2px solid rgb(235, 133, 0);
+   transition: 0.3s;
+   box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.4);
+   background-color: rgba(12, 117, 94, 0.788);
+    
 }
 
 .btn:hover {
-    background-color: rgba(161, 92, 2, 0.493);
-    border: 2px solid rgb(235, 133, 0);
+    box-shadow: 0 0 rgba(0, 0, 0, 0.4);
+    border-bottom-width: 2px;
+    transform: translateY(2px);
+    background-color: rgb(107, 175, 160);
+    color: black;
 }
 
 .btn-cart {
-    margin: 1.5vh 0 0 1vh;
+    width: 15vh;
     height: 4vh;
-    width: 10vh;
+    margin: 1vh 0 0 2vh;
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
     border-radius: 1vh;
-    background-color: rgba(12, 117, 94, 0.5);
-    border: 2px solid rgb(12, 117, 95);
-}
-
-.btn-cart:hover {
-    background-color: rgba(161, 92, 2, 0.493);
     border: 2px solid rgb(235, 133, 0);
+    transition: 0.3s;
+    box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.4);
+    background-color: rgba(12, 117, 94, 0.788);
+}
+.btn-cart:hover{
+    box-shadow: 0 0 rgba(0, 0, 0, 0.4);
+    border-bottom-width: 2px;
+    transform: translateY(2px);
+    background-color: rgba(255, 255, 255, 0.774);
+    color: rgb(12, 117, 95);
 }

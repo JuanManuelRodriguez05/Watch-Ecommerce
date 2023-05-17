@@ -2,26 +2,31 @@ import { useEffect, useState } from "react"
 import { ItemDetail } from "../ItemDetail/ItemDetail"
 import { useParams } from "react-router-dom"
 import { mFetch } from "../utils/mFetch"
+import "../ItemDetailContainer/ItemDetailContainer.css"
+import { doc, getDoc, getFirestore } from "firebase/firestore"
 
 
 const DetailContainer = () => {
-    const [item, setItem] = useState({})
     const [loading, setLoading] = useState(true)
+    const[producto, setProducto] = useState({})
     const { id } = useParams()
 
-    useEffect(() => {
-        mFetch(id)
-            .then(resp => setItem(resp))
-            .catch(err => console.log(err))
-            .finally(() => setLoading(false))
-    }, [])
 
-     return (
+     useEffect(() => {
+         const dbFirestore = getFirestore()
+         const queryDoc = doc(dbFirestore, "productos", id)
+         getDoc(queryDoc)
+             .then(resp => setProducto({ id: resp.id, ...resp.data() })) 
+             .catch(err => console.log(err))
+             .finally (()=> setLoading(false))
+     }, [])
+
+    return (
         <div>
             {loading ?
-                <h2>cargando...</h2>
+                <div className="custom-loader-detail"></div>
                 :
-                <ItemDetail item={item} />}
+                <ItemDetail producto={producto} />}
         </div>
     );
 }

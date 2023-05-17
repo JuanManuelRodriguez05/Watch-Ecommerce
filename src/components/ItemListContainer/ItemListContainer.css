@@ -8,7 +8,7 @@
 }
 
 .img-card {
-    margin-left: 4vh;
+    
     width: 17vh;
     height: 17vh;
     border-radius: 4vh;
@@ -18,11 +18,9 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    flex-direction: column;
+    flex-direction: row;
     border-radius: 1vh;
-    box-shadow: -58px -82px 41px -46px rgba(12, 117, 95, 0.61) inset;
-    -webkit-box-shadow: -58px -82px 41px -46px rgba(12, 117, 95, 0.61) inset;
-    -moz-box-shadow: -58px -82px 41px -46px rgba(12, 117, 95, 0.61) inset;
+    border: 2px solid rgb(12, 117, 95);
     width: 25vh;
     height: 42vh;
     margin: 4vh;
@@ -32,19 +30,36 @@
 .card-b {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     font-family: "Merriweather", sans-serif;
-    max-height: 22vh;
+    font-size: 1.9vh;
+    height: 24.8vh;
+    width: 24.8vh;
+    border-radius: 11vh 1vh 1vh 1vh;
+    background-color: rgb(12, 117, 95);
+
 }
- .card-btn{
-    width: 10vh;
-    margin-bottom: 1vh;
-    margin-left: 7vh;
-    border-radius: 5px;
-    border: none;
-    color: black;
- }
+.card-btn{
+   width: 15vh;
+   height: 3vh;
+   text-decoration: none;
+   color: black;
+   font-size: 16px;
+   border-radius: 1vh;
+   border: 2px solid rgb(235, 133, 0);
+   transition: 0.3s;
+   box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.4);
+   background-color: rgba(12, 117, 94, 0.788);
+}
+
+.card-btn:hover{
+   box-shadow: 0 0 rgba(0, 0, 0, 0.4);
+   border-bottom-width: 2px;
+   transform: translateY(2px);
+   background-color: rgba(255, 255, 255, 0.774);
+   color: rgb(12, 117, 95);
+}
 
  .seartch{
     position: absolute;
@@ -65,3 +80,23 @@
     margin: 1vh;
  }
  
+ .custom-loader {
+    margin-top: 15%;
+    width: 50px;
+    height: 50px;
+    --c: radial-gradient(farthest-side, rgb(235, 133, 0) 92%, #0000);
+    background:
+      var(--c) 50% 0,
+      var(--c) 50% 100%,
+      var(--c) 100% 50%,
+      var(--c) 0 50%;
+    background-size: 12px 12px;
+    background-repeat: no-repeat;
+    animation: s7 1s infinite;
+  }
+  
+  @keyframes s7 {
+    to {
+      transform: rotate(.5turn)
+    }
+  }

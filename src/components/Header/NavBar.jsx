@@ -2,9 +2,12 @@ import { Link, NavLink } from "react-router-dom"
 import CartWidget from "../CartWidget/CartWidget.jsx"
 import "../../components/Header/NavBar.css"
 
+const categoria = [
+    { id: "1", categoria: "watch", name: "WATCH" },
+    { id: "2", categoria: "smartwatch", name: "SMARTWATCH" }
+]
+
 const NavBar = () => {
-
-
     return (
         <div className="navBar">
             <div>
@@ -18,9 +21,7 @@ const NavBar = () => {
             </div>
 
             <div className="nav_items">
-                <NavLink to="/">INICIO</NavLink>
-                <NavLink to="/categoria/reloj" >RELOJES</NavLink>
-                <NavLink to="/categoria/smartwatch">SMARTWATCH</NavLink>
+                {categoria.map(categoria => <NavLink key={categoria.id} to={`/categoria/${categoria.categoria}`}>{categoria.name} </NavLink>)}
             </div>
 
         </div>
