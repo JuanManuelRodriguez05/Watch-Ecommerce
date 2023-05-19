@@ -34,6 +34,7 @@
 .nav_items {
     display: flex;
     align-items: flex-end;
+    margin-right: 10vh;
 }
 
 .nav_items a {

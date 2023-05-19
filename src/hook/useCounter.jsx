@@ -12,7 +12,9 @@ export const useCounter = (initial = 0, min, max) => {
         if (counter > min)
             setCounter(counter - 1)
     }
-
+ 
+ 
+    
     return { counter, handleCount, handleRemove}
 }
 

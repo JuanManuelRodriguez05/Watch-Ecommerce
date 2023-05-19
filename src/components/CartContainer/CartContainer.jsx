@@ -40,10 +40,11 @@ const addOrder = (evt) =>{
     .finally(()=>{
         setTimeout(()=>{
              deleteProducts()
-        }, 10000)
+        }, 3000)
    
     })
 }
+
 
 const handleOnChange = (evt) => {
     setDataForm({
@@ -87,7 +88,7 @@ const handleOnChange = (evt) => {
             ))}
             <div>
                 <div className="PTotal">
-                    <span>Precio total: U$D {totalCount} </span>
+                    <span>Total price: U$D {totalCount} </span>
                 </div>
                 <button onClick={deleteProducts} className="btn-CContainer">Delete products</button>
             </div>

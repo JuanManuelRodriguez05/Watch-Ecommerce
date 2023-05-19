@@ -32,7 +32,7 @@ const ItemListContainer = (props) => {
   const pFiltered = ({ stateF, filterChange }) => (
     <div className="container-b">
       <section className="seartch">
-        <h2>seartch</h2>
+        <h2>Seartch</h2>
         <input type="text" value={stateF} onChange={filterChange} />
       </section>
 
