@@ -7,7 +7,7 @@
 }
 
 .navBar {
-    background-image: url(../public/img/backgroundHeader.jpg);
+    background-image: url(/img/backgroundHeader.jpg);
     background-size: cover;
     border-radius: 0 0 3vh 3vh ;
     height: 30vh;
