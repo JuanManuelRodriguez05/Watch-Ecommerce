@@ -13,12 +13,17 @@ const CartContainer = () => {
         phone: "",
         email: ""
     })
-
+    const [emailError, setEmailError]= useState(false)
     const { cartList, deleteProducts, totalCount, deleteProduct} = useCartContext()
 
 // GENERAR ORDEN
 const addOrder = (evt) =>{
     evt.preventDefault()
+
+    if (dataForm.email !== dataForm.confirmEmail){
+        setEmailError(true)
+        return
+    }
      
     const order ={}
     order.buyer = dataForm
@@ -51,6 +56,9 @@ const handleOnChange = (evt) => {
       ...dataForm,
       [evt.target.name]: evt.target.value
     })
+    if (evt.target.name === "email" || evt.target.name === "confirmEmail"){
+        setEmailError(false)
+    }
     setCompleteForm(
       Object.values({
         ...dataForm,
@@ -58,7 +66,7 @@ const handleOnChange = (evt) => {
       }).every((value) => value !== "")
     )
   }
- console.log(dataForm)
+ 
     return (
         <div>
             {id.length !== 0 && <div className="order-id">
@@ -117,6 +125,8 @@ const handleOnChange = (evt) => {
                     onChange={handleOnChange}
                     value={dataForm.confirmEmail}
                     placeholder="Confirm email" />
+
+                    {emailError &&( <p className="error-message">Emails do not match</p> )}
 
                     <button className="btn-order" onClick={addOrder} disabled={!completeForm} >Send Order</button>
             </form>
